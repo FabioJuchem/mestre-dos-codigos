@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8"/>
+  <title>Mestre dos Códigos - FrontEnd</title>
+  <link rel="shortcut icon" href="./img/favicon-32x32.png" />
+  <link rel="stylesheet" type="text/css" href="css/button-style.css" />
+  <link rel="stylesheet" type="text/css" href="css/menu-style.css" />
+  <link rel="stylesheet" type="text/css" href="css/body-style.css" />
+  <link rel="stylesheet" type="text/css" href="css/carousel-style.css" />
+  <script src="js/menu.js"></script>
+  <script src="js/body.js"></script>
+</head>
+
+<body class="body">
+<div class="code-master">
+    <div id="menu" class="code-master__menu">
+      <div class="code-master__menu_logo">
+        <img src="./img/mestre-dos-codigos-logotipo.png" alt="logo" height="70px" width="150px">
+      </div>
+      <div class="code-master__menu_buttons">
+        <button class="code-master__menu_home menu__button" onclick="goHome()">
+          Home
+        </button>
+        <button class="code-master__menu_images menu__button">
+          Fotos
+        </button>
+      </div>
+      <div></div>
+      <div class="code-master__menu_user">
+        <span style="margin-right: 25px;">Fábio Vansovis Juchem</span>
+        <img src="./img/avatar.png" alt="avatar-user" height="70px" width="70px">
+      </div>
+    </div>
+  <div class="code-master__body">
+      <div class="code-master__body_content">
+        <h1 class="code-master__body_content_title">Primeira Imagem</h1>
+        <div class="code-master__body_content_container">
+          <button class="code-master__body_content_button"
+            onclick="previousPage()">
+            Anterior
+          </button>
+          <button class="code-master__body_content_button"
+            onclick="nextPage()">
+            Proxima
+          </button>
+        </div>
+        <div class="code-master__body_content_sub-title">
+          <span>
+            Selecione imagens do carrocel ou navegue pelos botões.
+          </span>
+        </div>
+      </div>
+      <div class="code-master__body_carousel">
+        <div class="code-master__body_carousel_item">
+          <img class="code-master__body_carousel_img"
+            src="./img/AbnerLaura-1.jpg" alt="" height="300" width="400">
+        </div>
+        <div class="code-master__body_carousel_item">
+          <img class="code-master__body_carousel_img"
+            src="./img/AbnerLaura-2.jpg" alt="" height="300" width="400">
+        </div>
+        <div class="code-master__body_carousel_item">
+          <img class="code-master__body_carousel_img"
+            src="./img/AbnerLaura-3.jpg" alt="" height="300" width="400">
+        </div>
+        <div class="code-master__body_carousel_item">
+          <img class="code-master__body_carousel_img"
+            src="./img/AbnerLaura-4.jpg" alt="" height="300" width="400">
+        </div>
+      </div>  
+    </div>
+  </div>
+</body>

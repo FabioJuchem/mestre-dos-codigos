@@ -1,0 +1,39 @@
+.code-master__body_carousel {
+  grid-area: carousel;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.code-master__body_carousel_item {
+  margin-left: 70px;
+  position: relative;
+}
+
+.code-master__body_carousel_item:hover {
+  opacity: 0.9;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+          transition-duration: 1s;
+}
+
+.code-master__body_carousel_item:hover ~ .code-master__body_carousel_item {
+  -webkit-transform: translate3d(125px, 0, 0);
+          transform: translate3d(125px, 0, 0);
+          transition-duration: 1s;
+}
+
+.code-master__body_carousel_item {
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+.code-master__body_carousel_item {
+  -webkit-transform-origin: center left;
+          transform-origin: center left;
+}
+
+.code-master__body_carousel_img {
+  border-radius: 10px;
+}
