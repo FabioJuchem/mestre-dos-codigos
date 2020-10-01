@@ -1,11 +1,13 @@
 .body {
   background-image: url("../img/AbnerLaura-1.jpg");
   background-color: #cccc;
-  background-size: cover;
+  background-size: auto;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   width: 100%;
   height: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 
 .code-master__body {
