@@ -1,82 +1,103 @@
 window.location = "#wall-1";
 
-var position = 1;
+var position = 0;
 
-function nextPage() {
-    var body = document.querySelector('.body');
-    var title = document.querySelector('.code-master__body_content_title');
-    if(this.position < 4) {
-    this.position += 1;
-    switch (position) {
-        case 1: 
-            body.classList.add('first');
-            title.textContent = 'Primeira Imagem';
-        break;
-        case 2: 
-            body.classList.add('second');
-            body.classList.remove('first');
-            title.textContent = 'Segunda Imagem';
-        break;
-        case 3: 
-            body.classList.add('third');
-            body.classList.remove('second');
-            title.textContent = 'Terceira Imagem';
-        break;
-        case 4: 
-            body.classList.add('fourth');
-            body.classList.remove('third');
-            title.textContent = 'Quarta Imagem';
-        break;
-    } 
-    }
-    
+var files = [
+    {
+        file: "Primeira Imagem",
+        url: "./img/AbnerLaura-1.jpg",
+        class: "first"
+    },
+    {
+        file: "Segunda Imagem",
+        url: "./img/AbnerLaura-2.jpg",
+        class: "second"
+    },
+    {
+        file: "Terceira Imagem",
+        url: "./img/AbnerLaura-3.jpg",
+        class: "third"
+    },
+    {
+        file: "Quarta Imagem",
+        url: "./img/AbnerLaura-4.jpg",
+        class: "fourth"
+    },
+    {
+        file: "Quinta Imagem",
+        url: "./img/AbnerLaura-5.jpg",
+        class: "fifth"
+    },
+    {
+        file: "Sexta Imagem",
+        url: "./img/AbnerLaura-6.jpg",
+        class: "sixth"
+    },
+    {
+        file: "Sétima Imagem",
+        url: "./img/AbnerLaura-7.jpg",
+        class: "seventh"
+    },
+    {
+        file: "Oitava Imagem",
+        url: "./img/AbnerLaura-8.jpg",
+        class: "eighth"
+    },
+    {
+        file: "Nona Imagem",
+        url: "./img/AbnerLaura-9.jpg",
+        class: "ninth"
+    },
+    {
+        file: "Decima Imagem",
+        url: "./img/AbnerLaura-10.jpg",
+        class: "tenth"
+    },
+
+]
+
+function create() {
+    const div = document.querySelector('.carousel-items');
+    this.files.forEach( function (item) {
+        const tags =`<div class="carousel__item" id="slider">
+                          <img class="carousel__img"
+                          src="${item.url}" alt="" height="200" width="300">
+                        </div>`
+        const element = document.createElement('div');
+        element.innerHTML = tags;
+        div.appendChild(element)
+    })
 }
 
-function previousPage() {
-    var body = document.querySelector('.body');
-    var title = document.querySelector('.code-master__body_content_title');
-    if (this.position != 1) {
-    this.position -= 1;
-    switch (position) {
-        case 1: 
-            body.classList.add('first');
-            body.classList.remove('second');
-            title.textContent = 'Primeira Imagem';
-        break;
-        case 2: 
-            body.classList.add('second');
-            body.classList.remove('third');
-            title.textContent = 'Segunda Imagem';
-        break;
-        case 3: 
-            body.classList.add('third');
-            body.classList.remove('fourth');
-            title.textContent = 'Terceira Imagem';
-        break;
-        case 4: 
-            body.classList.add('fourth');
-            title.textContent = 'Imagem 4';
-        break;
+function next() {
+    if (this.position !== this.files.length) {
+        this.position += 1;
+        this.removePreviousClass(this.position -1);
     }
-    }
-    
+    this.addClass();
+    this.addTitle();
 }
 
-function goHome() {
-    this.position = 1;
-    var body = document.querySelector('.body');
-    var title = document.querySelector('.code-master__body_content_title');
-    switch (body.className) {
-        case 'body second':
-            body.classList.remove('second');
-            break;
-        case 'body third': 
-            body.classList.remove('third');
-            break;
-        case 'body fourth': 
-            body.classList.remove('fourth');
-            break;
+function previous() {
+    if (this.position !== 0) {
+        this.position -= 1;
+        this.removePreviousClass(this.position +1);
     }
-    title.textContent = 'Primeira Imagem';
-    body.classList.add('first');
+    this.addClass();
+    this.addTitle();
+}
+
+function addClass() {
+    var body = document.querySelector('.body');
+    body.classList.add(`${this.files[this.position].class}`);
+}
+
+function removePreviousClass(position) {
+    var body = document.querySelector('.body');
+    body.classList.remove(`${this.files[position].class}`);
+}
+
+function addTitle() {
+    var title = document.querySelector('content__title');
+    title.textContent = `${this.files[this.position].file}`;
 }

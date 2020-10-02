@@ -9,17 +9,15 @@
   min-width: 100%;
 }
 
-@media screen and (max-width 480px) {
+@media screen and (max-width: 480px) {
   .body {
-  background-image: url("../img/AbnerLaura-1.jpg");
-  background-color: #cccc;
-  background-size: auto;
-  background-position: center;
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  min-width: 100%;
-}
+    background-image: url("../img/AbnerLaura-1.jpg");
+    background-color: #cccc;
+    background-size: auto;
+    background-position: center;
+    width: 100%;
+    height: auto;
+  }
 }
 
 .code-master__body {
@@ -31,28 +29,29 @@
     'left...'
     'carousel carousel'
     'footer footer';
-  grid-template-rows: 40% 40% 20%;
+  grid-template-rows: 20% 30% 20%;
   grid-template-columns: 50% 50%;
 }
 
-.code-master__body_content {
+.content {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   color: #ffff;
-  font-size: 50px;
+  font-size: 1.6rem;
   width: 100%;
+  margin-left: 50px;
 }
 
-.code-master__body_content_container {
+.content__container {
   display: flex;
   width: 30%;
   justify-content: space-between;
 }
 
-.code-master__body_content_button {
+.content__button {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   height: 50px;
   width: 100px;
@@ -60,10 +59,10 @@
   border: none;
   border-radius: 40px;
   color: #ffff;
-  font-size: 20px;
+  font-size: 1rem;
 }
 
-.code-master__body_content_button:active{
+.content__button:active{
   position: relative;
   top: 5px;
   box-shadow: none;  
@@ -71,7 +70,7 @@
   transition: ease-in 1ms;
 }
 
-.code-master__body_content_sub-title {
+.content__sub-title {
   font-size: 1rem;
   margin-top: 50px
 }
@@ -107,10 +106,40 @@ box-shadow: none !important;
   transition-duration: 1s;
 }
 
+.fifth {
+  background-image: url("../img/AbnerLaura-5.jpg");
+  transition-duration: 1s;
+}
+
+.sixth {
+  background-image: url("../img/AbnerLaura-6.jpg");
+  transition-duration: 1s;
+}
+
+.seventh {
+  background-image: url("../img/AbnerLaura-7.jpg");
+  transition-duration: 1s;
+}
+
+.eigth {
+  background-image: url("../img/AbnerLaura-8.jpg");
+  transition-duration: 1s;
+}
+
+.ninth {
+  background-image: url("../img/AbnerLaura-9.jpg");
+  transition-duration: 1s;
+}
+
+.tenth {
+  background-image: url("../img/AbnerLaura-10.jpg");
+  transition-duration: 1s;
+}
+
 .footer {
   color: #ffff;
   text-align: center;
-  font-size: 18px;
+  font-size: 0.8rem;
   position: fixed;
   width: 100%;
   bottom: 0;
