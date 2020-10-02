@@ -56,6 +56,8 @@ var files = [
 
 ]
 
+var previousClass = 'first';
+
 function create() {
     const div = document.querySelector('.carousel-items');
     this.files.forEach((item) => {
@@ -65,6 +67,7 @@ function create() {
                         </div>`
         const element = document.createElement('div');
         element.innerHTML = tags;
+        element.addEventListener('click', () => this.selectImg(item.class))
         div.appendChild(element)
     })
 }
@@ -89,15 +92,24 @@ function previous() {
 
 function addClass() {
     var body = document.querySelector('.body');
-    body.classList.add(`${this.files[this.position].class}`);
+    var newClass = this.files[this.position].class;
+    body.classList.add(`${newClass}`);
+    this.previousClass = newClass;
 }
 
-function removePreviousClass(position) {
+function removePreviousClass() {
     var body = document.querySelector('.body');
-    body.classList.remove(`${this.files[position].class}`);
+    body.classList.remove(`${this.previousClass}`);
 }
 
 function addTitle() {
     var title = document.querySelector('content__title');
     title.textContent = `${this.files[this.position].file}`;
+}
+
+function selectImg(newClass) {
+    var body = document.querySelector('.body');
+    body.classList.add(`${newClass}`);
+    this.removePreviousClass();
+    this.previousClass = newClass;
 }
