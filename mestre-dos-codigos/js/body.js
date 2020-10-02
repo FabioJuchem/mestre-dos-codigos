@@ -58,7 +58,7 @@ var files = [
 
 function create() {
     const div = document.querySelector('.carousel-items');
-    this.files.forEach( function (item) {
+    this.files.forEach((item) => {
         const tags =`<div class="carousel__item" id="slider">
                           <img class="carousel__img"
                           src="${item.url}" alt="" height="200" width="300">
