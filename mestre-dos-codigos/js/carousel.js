@@ -1,8 +1,8 @@
 
 function slideLeft() {
-  document.getElementById('slider').scrollLeft -= 250
+  document.querySelector('.carousel-items').scrollBy( { top: 0, left: -500, behavior: 'smooth'})
 }
 
 function slideRight() {
-  document.getElementById('slider').scrollLeft += 250
+  document.querySelector('.carousel-items').scrollBy( { top: 0, left: 500, behavior: 'smooth'})
 }
