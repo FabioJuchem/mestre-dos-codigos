@@ -6,57 +6,47 @@ var files = [
     {
         file: "Primeira Imagem",
         url: "./img/AbnerLaura-1.jpg",
-        class: "first"
     },
     {
         file: "Segunda Imagem",
         url: "./img/AbnerLaura-2.jpg",
-        class: "second"
     },
     {
         file: "Terceira Imagem",
         url: "./img/AbnerLaura-3.jpg",
-        class: "third"
     },
     {
         file: "Quarta Imagem",
         url: "./img/AbnerLaura-4.jpg",
-        class: "fourth"
     },
     {
         file: "Quinta Imagem",
         url: "./img/AbnerLaura-5.jpg",
-        class: "fifth"
     },
     {
         file: "Sexta Imagem",
         url: "./img/AbnerLaura-6.jpg",
-        class: "sixth"
     },
     {
         file: "Sétima Imagem",
         url: "./img/AbnerLaura-7.jpg",
-        class: "seventh"
     },
     {
         file: "Oitava Imagem",
         url: "./img/AbnerLaura-8.jpg",
-        class: "eighth"
     },
     {
         file: "Nona Imagem",
         url: "./img/AbnerLaura-9.jpg",
-        class: "ninth"
     },
     {
         file: "Decima Imagem",
         url: "./img/AbnerLaura-10.jpg",
-        class: "tenth"
     },
 
 ]
 
-var previousClass = 'first';
+var actualImg = {};
 
 function create() {
     const div = document.querySelector('.carousel-items');
@@ -67,27 +57,21 @@ function create() {
                         </div>`
         const element = document.createElement('div');
         element.innerHTML = tags;
-        element.addEventListener('click', () => this.selectImg(item.class))
+        element.addEventListener('click', () => this.selectImg(item))
         div.appendChild(element)
     })
 }
 
 function next() {
-    if (this.position !== this.files.length) {
-        this.position += 1;
-        this.removePreviousClass(this.position -1);
-    }
-    this.addClass();
-    this.addTitle();
+    this.position = this.files.indexOf(this.actualImg);
+    this.selectImg(this.files[this.position + 1])
+    this.addTitle(this.files[this.position +1].file);
 }
 
 function previous() {
-    if (this.position !== 0) {
-        this.position -= 1;
-        this.removePreviousClass(this.position +1);
-    }
-    this.addClass();
-    this.addTitle();
+    this.position = this.files.indexOf(this.actualImg);
+    this.selectImg(this.files[this.position - 1])
+    this.addTitle(this.files[this.position - 1].file);
 }
 
 function addClass() {
@@ -102,14 +86,13 @@ function removePreviousClass() {
     body.classList.remove(`${this.previousClass}`);
 }
 
-function addTitle() {
+function addTitle(title) {
     var title = document.querySelector('content__title');
-    title.textContent = `${this.files[this.position].file}`;
+    title.textContent = `${title}`;
 }
 
-function selectImg(newClass) {
+function selectImg(item) {
     var body = document.querySelector('.body');
-    body.classList.add(`${newClass}`);
-    this.removePreviousClass();
-    this.previousClass = newClass;
+    body.style.backgroundImage = `url('${item.url}')`
+    this.actualImg = item;
 }

@@ -1,8 +1,12 @@
 
 function slideLeft() {
-  document.querySelector('.carousel-items').scrollBy( { top: 0, left: -500, behavior: 'smooth'})
+  const element = document.querySelector('.carousel-items')
+  const childWidth = element.firstElementChild.offsetWidth
+  element.scrollBy( { top: 0, left: -childWidth, behavior: 'smooth'})
 }
 
 function slideRight() {
-  document.querySelector('.carousel-items').scrollBy( { top: 0, left: 500, behavior: 'smooth'})
+  const element = document.querySelector('.carousel-items')
+  const childWidth = element.firstElementChild.offsetWidth
+  element.scrollBy( { top: 0, left: childWidth, behavior: 'smooth'})
 }

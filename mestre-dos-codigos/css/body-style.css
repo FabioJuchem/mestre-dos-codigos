@@ -7,6 +7,7 @@
   height: auto;
   max-width: 100%;
   min-width: 100%;
+  transition-duration: 1s;
 }
 
 @media screen and (max-width: 480px) {
@@ -84,56 +85,6 @@ border-color: none !important;
 outline: 0;
 -webkit-box-shadow: none !important;
 box-shadow: none !important;
-}
-
-.first {
-  background-image: url("../img/AbnerLaura-1.jpg");
-  transition-duration: 1s;
-}
-
-.second {
-  background-image: url("../img/AbnerLaura-2.jpg");
-  transition-duration: 1s;
-}
-
-.third {
-  background-image: url("../img/AbnerLaura-3.jpg");
-  transition-duration: 1s;
-}
-
-.fourth {
-  background-image: url("../img/AbnerLaura-4.jpg");
-  transition-duration: 1s;
-}
-
-.fifth {
-  background-image: url("../img/AbnerLaura-5.jpg");
-  transition-duration: 1s;
-}
-
-.sixth {
-  background-image: url("../img/AbnerLaura-6.jpg");
-  transition-duration: 1s;
-}
-
-.seventh {
-  background-image: url("../img/AbnerLaura-7.jpg");
-  transition-duration: 1s;
-}
-
-.eigth {
-  background-image: url("../img/AbnerLaura-8.jpg");
-  transition-duration: 1s;
-}
-
-.ninth {
-  background-image: url("../img/AbnerLaura-9.jpg");
-  transition-duration: 1s;
-}
-
-.tenth {
-  background-image: url("../img/AbnerLaura-10.jpg");
-  transition-duration: 1s;
 }
 
 .footer {
