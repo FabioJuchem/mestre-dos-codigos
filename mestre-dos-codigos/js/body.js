@@ -48,6 +48,10 @@ var files = [
 
 var actualImg = {};
 
+function goHome() {
+    this.selectImg(this.files[0])
+}
+
 function create() {
     const div = document.querySelector('.carousel-items');
     this.files.forEach((item) => {
