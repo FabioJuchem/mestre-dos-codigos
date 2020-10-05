@@ -69,34 +69,23 @@ function create() {
 function next() {
     this.position = this.files.indexOf(this.actualImg);
     this.selectImg(this.files[this.position + 1])
-    this.addTitle(this.files[this.position +1].file);
+    this.addTitle();
 }
 
 function previous() {
     this.position = this.files.indexOf(this.actualImg);
     this.selectImg(this.files[this.position - 1])
-    this.addTitle(this.files[this.position - 1].file);
-}
-
-function addClass() {
-    var body = document.querySelector('.body');
-    var newClass = this.files[this.position].class;
-    body.classList.add(`${newClass}`);
-    this.previousClass = newClass;
-}
-
-function removePreviousClass() {
-    var body = document.querySelector('.body');
-    body.classList.remove(`${this.previousClass}`);
+    this.addTitle();
 }
 
 function addTitle(title) {
-    var title = document.querySelector('content__title');
-    title.textContent = `${title}`;
+    var title = document.querySelector('.content__title');
+    title.textContent = `${this.actualImg.file}`;
 }
 
 function selectImg(item) {
     var body = document.querySelector('.body');
     body.style.backgroundImage = `url('${item.url}')`
     this.actualImg = item;
+    this.addTitle();
 }
