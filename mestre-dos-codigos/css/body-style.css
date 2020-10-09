@@ -27,11 +27,11 @@
   width: 100%;
   display: grid;
   grid-template-areas: 
-    'left...'
-    'carousel carousel'
-    'footer footer';
+    'left'
+    'carousel'
+    'footer';
   grid-template-rows: 30% 30% 30%;
-  grid-template-columns: 100% 0%;
+  grid-template-columns: 100%;
 }
 
 .content {

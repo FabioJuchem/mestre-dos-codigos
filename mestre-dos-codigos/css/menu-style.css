@@ -5,12 +5,13 @@
 .code-master {
   display: grid;
   margin: 0;
-  width: 100%;
+  width: 110%;
   height: 100%;
   grid-template-areas: 
     'first'
     'second';
   grid-template-rows: 70px 1500px;
+  grid-template-columns: 110%;
 }
 
 .code-master__menu {
