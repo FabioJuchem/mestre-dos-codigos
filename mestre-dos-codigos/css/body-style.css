@@ -8,30 +8,17 @@
   max-width: 100%;
   min-width: 100%;
   transition-duration: 1s;
-}
-
-@media screen and (max-width: 480px) {
-  .body {
-    background-image: url("../img/AbnerLaura-1.jpg");
-    background-color: #cccc;
-    background-size: auto;
-    background-position: center;
-    width: 100%;
-    height: auto;
-  }
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .code-master__body {
-  grid-area: second;
   height: 100%;
   width: 100%;
-  display: grid;
-  grid-template-areas: 
-    'left'
-    'carousel'
-    'footer';
-  grid-template-rows: 30% 30% 30%;
-  grid-template-columns: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .content {
@@ -42,8 +29,8 @@
   justify-content: center;
   color: #ffff;
   font-size: 1.6rem;
-  width: 100%;
   margin-left: 50px;
+  height: 50%;
 }
 
 .content__container {
@@ -94,4 +81,10 @@ box-shadow: none !important;
   position: fixed;
   width: 100%;
   bottom: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .content__title {
+    font-size: 1.6rem;
+  }
 }
